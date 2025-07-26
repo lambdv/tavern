@@ -34,4 +34,5 @@ Route::get('/boards/{name}', function ($name) {
     return app(BoardController::class)->boardView($name);
 })->name('boards.view');
 
-Volt::route('/boards/{boardName}/{threadId}', 'pages.thread')->name('thread.view');
+Volt::route('/boards/{boardName}/{threadId}', 'pages.thread')
+->name('thread.view');
