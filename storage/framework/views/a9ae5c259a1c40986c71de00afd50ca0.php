@@ -12,6 +12,7 @@ use Livewire\Attributes\Layout;
 ?>
 
 <div>
+    <title><?php echo e($thread -> title); ?></title>
     <div class="p-5 m-2 bg-gray-900" id="post">
         <h1 class="text-2xl font-bold"><?php echo e($this->thread->title); ?></h1>
         <p class=""><?php echo e($this->thread->body); ?></p>

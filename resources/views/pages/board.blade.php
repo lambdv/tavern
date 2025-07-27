@@ -1,5 +1,9 @@
 
-<x-layouts.root title="Tavern">
+
+<x-layouts.root title=" {{$board->name}} | Tavern">
+
+    <livewire:thread.post-form :board=$board />
+
     <div>
         <h1 class="text-xl text-bold">{{$board->name}}</h1>
         @foreach($threads as $thread)
@@ -11,6 +15,10 @@
                     <p>
                         {{$thread->body}}
                     </p>
+
+                    @if (Auth::user()->id == $thread->user_id)
+                        <button >Delete</button>
+                    @endif
                 </div>
             </a>
 

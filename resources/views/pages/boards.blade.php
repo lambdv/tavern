@@ -1,5 +1,6 @@
 
-<x-layouts.root title="Tavern">
+
+<x-layouts.root title="Boards | Tavern">
     <h2 class="font-bold text-4xl">boards</h2>
     <div class="grid grid-cols-4 wrap">
         @foreach ($boards as $board)

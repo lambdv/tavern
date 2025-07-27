@@ -9,8 +9,8 @@ use App\Models\Comment;
 use Livewire\Volt\Component;
 use Livewire\Attributes\Layout;
 
-new 
-#[Layout('components.layouts.root')] 
+new
+#[Layout('components.layouts.root')]
 class extends Component {
     public $board;
     public $thread;
@@ -31,6 +31,7 @@ class extends Component {
 }; ?>
 
 <div>
+    <title>{{$thread -> title}}</title>
     <div class="p-5 m-2 bg-gray-900" id="post">
         <h1 class="text-2xl font-bold">{{$this->thread->title}}</h1>
         <p class="">{{$this->thread->body}}</p>

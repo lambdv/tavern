@@ -9,4 +9,11 @@ class Thread extends Model
 {
     /** @use HasFactory<\Database\Factories\ThreadFactory> */
     use HasFactory;
+
+    protected $fillable = [
+        'title',
+        'body',
+        'board_id',
+        'user_id'
+    ];
 }
